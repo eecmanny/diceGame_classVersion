@@ -19,7 +19,7 @@ string userTypedDicePick = Console.ReadLine();
 int userTypedDicePickNumber = int.Parse(userTypedDicePick);
 int computerRoll = roll.DiceRoll();
 
-
+//need to wrap around a method and move to class
 switch (userTypedDicePick)
 {
     case "1":
@@ -51,36 +51,48 @@ public class DiceRollGenerator
     public int DiceRoll()
     {
         int dice = randomRoll.Next(1, 7);   // creates a number between 1 and 6
-        //Console.WriteLine(dice);
+        Console.WriteLine(dice);
         return dice;
     }
 }
 
 public class DicePick
 {
-    private int userTurn = 0;
-
+    //
     public void UserPick(int userTypedDicePickNumber, int computerRoll)
     {
-        if (userTurn == 0)
+        if (userTypedDicePickNumber == computerRoll)
         {
-            userTurn++;
-            //if (userTypedDicePickNumber == roll.DiceRoll())
-            if (userTypedDicePickNumber == computerRoll)
-            {
-                Console.WriteLine("Number doesn't match try again");
-            }
-            else if (userTurn == 1)
-            {
-                Console.WriteLine("Sorry you guessed wrong again, you have one more chance.");
-            }
-            else
-            {
-                Console.WriteLine("You lose!");
-
-            }
+            Console.WriteLine("You win");
+        }
+        if (userTypedDicePickNumber != computerRoll)
+        {
+            Console.WriteLine("Sorry you guessed wrong again, you have one more chance.");
             Console.WriteLine("method works");
         }
+        //else
+        //{
+        //    Console.WriteLine("You lose!");
+
+        //if (userTurn == 0)
+        //{
+        //    userTurn++;
+        //    //if (userTypedDicePickNumber == roll.DiceRoll())
+        //    if (userTypedDicePickNumber == computerRoll)
+        //    {
+        //        Console.WriteLine("Number doesn't match try again");
+        //    }
+        //    else if (userTurn == 1)
+        //    {
+        //        Console.WriteLine("Sorry you guessed wrong again, you have one more chance.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("You lose!");
+
+        //    }
+        //    Console.WriteLine("method works");
+        //}
         Console.WriteLine("method works");
     }
 }
@@ -92,3 +104,9 @@ class DiceMatchUp
         Console.WriteLine("method worked");
     }
 }
+public class GameMenu
+{
+
+}
+
+
