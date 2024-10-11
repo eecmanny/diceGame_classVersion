@@ -1,4 +1,3 @@
-//bool appOff = false;
 GameMenu gameMenu = new GameMenu();
 gameMenu.GameMenuUserPicker();
 
