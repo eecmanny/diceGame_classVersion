@@ -1,49 +1,6 @@
 //bool appOff = false;
-
-// Instantiate the DicePick class
-DicePick userDicePick = new DicePick();
-// Instantiate the Random number class
-DiceRollGenerator roll = new DiceRollGenerator();
-////verified random roll method works
-//Console.WriteLine(roll.DiceRoll());
-
-//Console.WriteLine(roll.dice);
-
-
-Console.WriteLine("Do you want to play a game?");
-Console.WriteLine("");
-Console.WriteLine("Dice Just Rolled");
-Console.WriteLine("Please choose a number 1 through 6");
-string userTypedDicePick = Console.ReadLine();
-
-int userTypedDicePickNumber = int.Parse(userTypedDicePick);
-int computerRoll = roll.DiceRoll();
-
-//need to wrap around a method and move to class
-switch (userTypedDicePick)
-{
-    case "1":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    case "2":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    case "3":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    case "4":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    case "5":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    case "6":
-        userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
-        break;
-    default:
-        Console.WriteLine("Invalid option. Please choose 1, 2, 3, 4, 5, or 6.");
-        break;
-}
+GameMenu gameMenu = new GameMenu();
+gameMenu.GameMenuUserPicker();
 
 public class DiceRollGenerator
 {
@@ -58,42 +15,46 @@ public class DiceRollGenerator
 
 public class DicePick
 {
-    //
+    //int userTurn = 0;
+
     public void UserPick(int userTypedDicePickNumber, int computerRoll)
+    //public void UserPick(int userTypedDicePickNumber, int computerRoll, GameMenu gameMenu)
     {
-        if (userTypedDicePickNumber == computerRoll)
-        {
-            Console.WriteLine("You win");
-        }
-        if (userTypedDicePickNumber != computerRoll)
-        {
-            Console.WriteLine("Sorry you guessed wrong again, you have one more chance.");
-            Console.WriteLine("method works");
-        }
-        //else
-        //{
-        //    Console.WriteLine("You lose!");
+        //bool winGame = true;
 
-        //if (userTurn == 0)
-        //{
-        //    userTurn++;
-        //    //if (userTypedDicePickNumber == roll.DiceRoll())
-        //    if (userTypedDicePickNumber == computerRoll)
-        //    {
-        //        Console.WriteLine("Number doesn't match try again");
-        //    }
-        //    else if (userTurn == 1)
-        //    {
-        //        Console.WriteLine("Sorry you guessed wrong again, you have one more chance.");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("You lose!");
+        for (int userTurn = 1; userTurn <= 3; userTurn++)
+        {
+            if (userTypedDicePickNumber == computerRoll)
+            //if (userTypedDicePickNumber == computerRoll && winGame == true)
+            {
+                Console.WriteLine("You win");
+                break ;
+            }
+            if (userTurn == 1)
+            //if (userTurn == 1 && winGame == false)
+            {
+                //gameMenu.GameMenuUserPicker();
 
-        //    }
-        //    Console.WriteLine("method works");
-        //}
-        Console.WriteLine("method works");
+                //userTurn++;
+                Console.WriteLine("Sorry you guessed wrong, you have two more chance.");
+                Console.WriteLine("guess 1");
+                userTypedDicePickNumber = int.Parse(Console.ReadLine());
+            }
+
+            else if (userTurn == 2)
+            //else if (userTurn == 2 && winGame == false)
+            {
+                //gameMenu.GameMenuUserPicker();
+
+                Console.WriteLine("Sorry you guessed wrong, you have one more chance.");
+                Console.WriteLine("guess 2");
+                userTypedDicePickNumber = int.Parse(Console.ReadLine());
+            }
+            else
+            {
+                Console.WriteLine("You lose the the dice roll was " + computerRoll);
+            }
+        }
     }
 }
 
@@ -101,12 +62,50 @@ class DiceMatchUp
 {
     private void DiceNumberGuess()
     {
-        Console.WriteLine("method worked");
+        Console.WriteLine("DiceNumberGuess method worked");
     }
 }
 public class GameMenu
 {
+    public void GameMenuUserPicker()
+    {
 
+        DicePick userDicePick = new DicePick();
+        // Instantiate the Random number class
+        DiceRollGenerator roll = new DiceRollGenerator();
+
+        Console.WriteLine("Do you want to play a game?");
+        Console.WriteLine("");
+        Console.WriteLine("Dice Just Rolled");
+        Console.WriteLine("Please choose a number 1 through 6");
+        string userTypedDicePick = Console.ReadLine();
+
+        int userTypedDicePickNumber = int.Parse(userTypedDicePick);
+        int computerRoll = roll.DiceRoll();
+
+        switch (userTypedDicePick)
+        {
+            case "1":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            case "2":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            case "3":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            case "4":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            case "5":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            case "6":
+                userDicePick.UserPick(userTypedDicePickNumber, computerRoll);
+                break;
+            default:
+                Console.WriteLine("Invalid option. Please choose 1, 2, 3, 4, 5, or 6.");
+                break;
+        }
+    }
 }
-
-
