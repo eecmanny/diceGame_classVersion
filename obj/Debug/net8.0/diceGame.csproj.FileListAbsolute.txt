@@ -1,0 +1,14 @@
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\bin\Debug\net8.0\diceGame.exe
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\bin\Debug\net8.0\diceGame.deps.json
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\bin\Debug\net8.0\diceGame.runtimeconfig.json
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\bin\Debug\net8.0\diceGame.dll
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\bin\Debug\net8.0\diceGame.pdb
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.AssemblyInfoInputs.cache
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.AssemblyInfo.cs
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.csproj.CoreCompileInputs.cache
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.dll
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\refint\diceGame.dll
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.pdb
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\diceGame.genruntimeconfig.cache
+C:\Users\eec12\Downloads\diceGame_classVersion-main\diceGame_classVersion-main\diceGame\obj\Debug\net8.0\ref\diceGame.dll
